@@ -10,14 +10,17 @@ There are three scripts of relevance here:
 
 The following software is required to run these scripts.
 
+* Perl -- a relatively recent version of Perl, 5.20 and above.  Packages required are ```Getopt::Long``` and ```DBI``` (for connections to MySQL).
 * R version 3.5 and above.  This has to be directly accessible from the path. 
 * MySQL
+* NCBI Blast+.  Executables are accessed via the folder, not necessarilly from the path.
+* The COGsoft suite of programs, which have to be compiled locally to work. These are availalbe at: [COGsoft.201204.tar] (ftp://ftp.ncbi.nih.gov/pub/wolf/COGs/COGsoft).  Executables are accessed via the folder, not necessarilly from the path.
 
 
 ## Script description
 
 ### listAandB.pl
-This is a Perl script that uses ConditionA (for example =>0.8) on columns with  headers from ListA and uses ConditionB (for example <=0.4) on columns with headers from ListB on a specified inFile to a specified outFile.
+This is a Perl script that uses ConditionA (for example =>0.8) on columns with headers from ListA and uses ConditionB (for example <=0.4) on columns with headers from ListB on a specified inFile to a specified outFile.
 
 A	running example is:
 

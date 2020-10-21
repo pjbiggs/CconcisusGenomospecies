@@ -14,7 +14,7 @@ The following software is required to run these scripts.
 * R version 3.5 and above.  This has to be directly accessible from the path. 
 * MySQL
 * NCBI Blast+.  Executables are accessed via the folder, not necessarilly from the path.
-* The COGsoft suite of programs, which have to be compiled locally to work. These are available at: [sourceforge] (https://sourceforge.net/projects/cogtriangles/).  Alternatively the tar file COGsoft.201204.tar can be found at ftp://ftp.ncbi.nih.gov/pub/wolf/COGs/COGsoft.  Executables are accessed via the installation folder, not necessarilly from the path.
+* The COGsoft suite of programs, which have to be compiled locally to work. These are available at: [sourceforge](https://sourceforge.net/projects/cogtriangles/).  Alternatively the tar file COGsoft.201204.tar can be found at ftp://ftp.ncbi.nih.gov/pub/wolf/COGs/COGsoft.  Executables are accessed via the installation folder, not necessarilly from the path.
 
 
 ## Script description

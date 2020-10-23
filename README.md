@@ -1,10 +1,10 @@
 # CconcisusGenomospecies
-A repository of scripts used in the genomic analysis of Campylobacter concisus genomospecies GS1 and GS2.
 
-There are three scripts of relevance here:
-* listAandB.pl
-* table2Dist2Nex.pl
-* COGnitorParse2full.pl
+## Overview
+This is a repository of scripts used in the genomic analysis of *Campylobacter concisus* genomospecies GS1 and GS2.  There are three scripts of relevance here:
+* ```listAandB.pl```
+* ```table2Dist2Nex.pl```
+* ```COGnitorParse2full.pl```
 
 ## Requirements to run these scripts 
 
@@ -14,13 +14,17 @@ The following software is required to run these scripts.
 * R version 3.5 and above.  This has to be directly accessible from the path. 
 * MySQL
 * NCBI Blast+.  Executables are accessed via the folder, not necessarilly from the path.
-* The COGsoft suite of programs, which have to be compiled locally to work. These are available at [sourceforge.net](https://sourceforge.net/projects/cogtriangles/).  Alternatively the tar file ```COGsoft.201204.tar``` can be found at the FTP location ftp://ftp.ncbi.nih.gov/pub/wolf/COGs/COGsoft.  Executables are accessed via the installation folder, not necessarilly from the path.
+* The COGsoft suite of programs, which have to be compiled locally to work. These are available at [sourceforge.net](https://sourceforge.net/projects/cogtriangles/).  Alternatively the tar file ```COGsoft.201204.tar``` can be found at the FTP location ftp://ftp.ncbi.nih.gov/pub/wolf/COGs/COGsoft.  Executables are accessed via the installation folder, not necessarily from the path.  Please note that compilation of these programs is not straightword, but there are solutions on the Internet to deal with such issues.
 
 
 ## Script description
 
 ### listAandB.pl
-This is a Perl script that uses ConditionA (for example =>0.8) on columns with headers from ListA and uses ConditionB (for example <=0.4) on columns with headers from ListB on a specified inFile to a specified outFile.
+This is a Perl script that uses ConditionA (for example =>0.8) on columns with headers from ListA and uses ConditionB (for example <=0.4) on columns with headers from ListB on a specified inFile to a specified outFile.  The following input is required at runtime as options:
+* ```listA``` 
+* ```listB``` 
+* ```inFile``` 
+* ```outFile``` 
 
 A	running example is:
 
@@ -28,6 +32,20 @@ A	running example is:
 ./listAandB.pl -listA ArcoCryaerophilusListA -listB ArcoCryaerophilusListB \
 -inFile Arco_bsr_matrix_values.txt -outFile test.txt
 ```
+
+
+### COGnitorParse2full.pl
+
+A Perl script to take the a set of amino acid fasta files and analyse them with the COG software.  The input here is a list of genomes that have been through annotation with [Prokka](https://github.com/tseemann/prokka), for which the amino acid fasta files -- ```*.faa``` -- are used as input.  The following input is required at runtime as options:
+* ```inList``` a list of genomes to be analysed
+* ```dataGroup``` a folder in which the 
+
+A	running example is:
+
+```perl
+./COGnitorParse2full.pl -inList inList.txt -dataGroup workingGroup
+```
+
 
 ### table2Dist2Nex.pl
 
@@ -43,12 +61,4 @@ A	running example is:
 ```perl
 ./table2Dist2Nex.pl -inFile smallInfile -project currentWork -metaFile isolateList \ 
 -metaHeader false -COGdata yes
-```
-
-### COGnitorParse2full.pl
-
-A	running example is:
-
-```perl
-
 ```

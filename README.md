@@ -2,9 +2,9 @@
 
 ## Overview
 This is a repository of scripts used in the genomic analysis of *Campylobacter concisus* genomospecies GS1 and GS2.  There are three scripts of relevance here:
-* ```listAandB.pl```
-* ```table2Dist2Nex.pl```
-* ```COGnitorParse2full.pl```
+* `listAandB.pl`
+* `table2Dist2Nex.pl`
+* `COGnitorParse2full.pl`
 
 ## Requirements to run these scripts 
 
@@ -21,10 +21,10 @@ The following software is required to run these scripts.
 
 ### listAandB.pl
 This is a Perl script that uses ConditionA (for example =>0.8) on columns with headers from ListA and uses ConditionB (for example <=0.4) on columns with headers from ListB on a specified inFile to a specified outFile.  The following input is required at runtime as options:
-* ```listA``` 
-* ```listB``` 
-* ```inFile``` 
-* ```outFile``` 
+* `listA` -- 
+* `listB` -- 
+* `inFile` -- 
+* `outFile` -- 
 
 A	running example is:
 
@@ -37,8 +37,8 @@ A	running example is:
 ### COGnitorParse2full.pl
 
 A Perl script to take the a set of amino acid fasta files and analyse them with the COG software.  The input here is a list of genomes that have been through annotation with [Prokka](https://github.com/tseemann/prokka), for which the amino acid fasta files -- ```*.faa``` -- are used as input.  The following input is required at runtime as options:
-* ```inList``` a list of genomes to be analysed.  This is a tab delimted file with 4 columns: input genome name | genus name | species name | output genome name.  The input and output genome name can be the same, but do not have to be.
-* ```dataGroup``` a folder in which the Prokka annotations can be found, each within their own folder for that isolate
+* `inList` -- a list of genomes to be analysed.  This is a tab delimted file with 4 columns: input genome name | genus name | species name | output genome name.  The input and output genome name can be the same, but do not have to be.
+* `dataGroup` -- a folder in which the Prokka annotations can be found, each within their own folder for that isolate
 
 A	running example is:
 
@@ -50,11 +50,11 @@ A	running example is:
 ### table2Dist2Nex.pl
 
 A Perl script to take in a table from a set of data and make a simple distance matrix from it that can then be viewed in SplitsTree.  The following input is required at runtime as options:
-1. ```metaFile``` a metafile of the items under analyses - just a list of the genomes, in the same order they are in the datafile
-2. ```metaHeader```  a declaration of whether the metafile has a header or not - this can be either ```true``` or ```false```
-3. ```project```  a project name to find a root folder -- this will have to be adpated to your folder
-4. ```inFile``` an input file of data to analyse as a standard table -- the first column can be left in or removed, the code will remove it if necessary
-5. ```COGdata``` a description of whether the COG dataset is being used -- values are either ```yes``` or ```no```
+1. `metaFile` -- a metafile of the items under analyses.  A list of the genomes, in the same order they are in the datafiles
+2. `metaHeader` -- a declaration of whether the metafile has a header or not - this can be either `true` or `false`
+3. `project`` -- a project name to find a root folder -- this will have to be adpated to your folder
+4. `inFile` -- an input file of data to analyse as a standard table -- the first column can be left in or removed, the code will remove it if necessary
+5. `COGdata` -- a description of whether the COG dataset is being used -- values are either `yes` or `no`
 
 A	running example is:
 

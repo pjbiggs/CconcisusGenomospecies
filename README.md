@@ -37,9 +37,7 @@ A	running example is:
 ### COGnitorParse2full.pl
 
 A Perl script to take the a set of amino acid fasta files and analyse them with the COG software.  The input here is a list of genomes that have been through annotation with [Prokka](https://github.com/tseemann/prokka), for which the amino acid fasta files -- ```*.faa``` -- are used as input.  The following input is required at runtime as options:
-* `inList` -- a list of genomes to be analysed.  This is a tab delimted file with 4 columns: 
-input genome name | genus name | species name | output genome name  
-The input and output genome name can be the same, but do not have to be.
+* `inList` -- a list of genomes to be analysed.  This is a tab delimted file with 4 columns: input genome name | genus | species | output genome name.  The input and output genome name can be the same, but do not have to be.
 * `dataGroup` -- a folder in which the Prokka annotations can be found, each within their own folder for that isolate.
 
 A	running example is:

@@ -46,6 +46,8 @@ A	running example is:
 ./COGnitorParse2full.pl -inList inList.txt -dataGroup workingGroup
 ```
 
+The source data is available at the FTP site: ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/data/.  The COG files `cog2003-2014.csv`, `cognames2003-2014.tab`, `fun2003-2014.tab`, `genomes2003-2014.tab` and `prot2003-2014.fa` have to be renamed with a '-' being replaced by an underscore in the names.  It is also necessary to make a BLAST protein database of the renamed `prot2003_2014.fa` file.
+
 
 ### table2Dist2Nex.pl
 

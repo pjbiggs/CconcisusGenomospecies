@@ -20,11 +20,12 @@ The following software is required to run these scripts.
 ## Script description
 
 ### listAandB.pl
-This is a Perl script that uses ConditionA (for example =>0.8) on columns with headers from ListA and uses ConditionB (for example <=0.4) on columns with headers from ListB on a specified inFile to a specified outFile.  The following input is required at runtime as options:
-* `listA` -- 
-* `listB` -- 
-* `inFile` -- 
-* `outFile` -- 
+
+This is a Perl script that takes a text file (tsv) of BLAST score ratio (BSR) values for CDS identified in the genomes under examination and writes a new text file (tsv) that contains the results where the target genomes (listA) have BSR values that fulfil ConditionA (generally >= 0.8) and the non-target genomes (listB) have BSR values that fulfil ConditionB (generally <=0.4). The aim is to identify genes that have high sequence similarity in the target genomes and low sequence similarity in the non-target genomes.  The following input is required at runtime as options:
+* `listA` -- a list of target genomes that fulfil ConditionA
+* `listB` -- a list of target genomes that fulfil ConditionB
+* `inFile` -- a text file (tsv) of BLAST score ratio (BSR) values for CDS identified in the genomes under examination
+* `outFile` -- a test file of results fulfilling both ConditionA and ConditionB
 
 A	running example is:
 

@@ -21,7 +21,7 @@ The following software is required to run these scripts.
 
 ### listAandB.pl
 
-This is a Perl script that takes a text file (tsv) of BLAST score ratio (BSR) values for CDS identified in the genomes under examination and writes a new text file (tsv) that contains the results where the target genomes (listA) have BSR values that fulfil ConditionA (generally >= 0.8) and the non-target genomes (listB) have BSR values that fulfil ConditionB (generally <=0.4). The aim is to identify genes that have high sequence similarity in the target genomes and low sequence similarity in the non-target genomes.  The following input is required at runtime as options:
+This is a Perl script that takes a text file (tsv) of BLAST score ratio (BSR) values for CDS identified in the genomes under examination and writes a new text file (tsv) that contains the results where the target genomes (listA) have BSR values that fulfil ConditionA (generally >= 0.8) and the non-target genomes (listB) have BSR values that fulfil ConditionB (generally <= 0.4). The aim is to identify genes that have high sequence similarity in the target genomes and low sequence similarity in the non-target genomes.  The following input is required at runtime as options:
 * `listA` -- a list of target genomes that fulfil ConditionA
 * `listB` -- a list of target genomes that fulfil ConditionB
 * `inFile` -- a text file (tsv) of BLAST score ratio (BSR) values for CDS identified in the genomes under examination
